@@ -58,5 +58,30 @@ h1, h2, h3, h4, h5, h6, button, a {
           transition: all 0.5s ease-in-out; }
           .App-header .menu ul li a:hover {
             opacity: 1; }
+  .App-footer {
+    padding: 20px 0;
+    margin: auto -90px;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: flex;
+    justify-content: center; }
+    .App-footer .github {
+      margin: auto;
+      font-size: 20px;
+      text-decoration: none;
+      color: #ffffff;
+      opacity: .6;
+      transition: all 0.5s ease-in-out; }
+      .App-footer .github:hover {
+        opacity: 1; }
+      .App-footer .github-icon {
+        width: 20px;
+        height: 20px;
+        background: url("img/github.png") no-repeat;
+        background-size: 100% 100%;
+        display: inline-block;
+        margin-right: 10px; }
 
 /*# sourceMappingURL=App.css.map */

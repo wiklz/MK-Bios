@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300,400,500,700&subset=latin-ext');
 $basic-transition: all .5s ease-in-out;
-$basic-opasity: .8;
+$basic-opacity: .8;
 
 p,span,i,em,b,strong{
   font-family: 'Roboto', sans-serif;
@@ -26,7 +26,7 @@ h1,h2,h3,h4,h5,h6,button,a{
       border: none;
       font-size: 20px;
       color: #ffffff;
-      opacity: $basic-opasity;
+      opacity: $basic-opacity;
       cursor: pointer;
 
       transition: $basic-transition;
@@ -66,7 +66,7 @@ h1,h2,h3,h4,h5,h6,button,a{
             font-size: 20px;
             text-decoration: none;
             color: #ffffff;
-            opacity: $basic-opasity;
+            opacity: $basic-opacity;
             transition: $basic-transition;
 
             &:hover{
@@ -74,6 +74,36 @@ h1,h2,h3,h4,h5,h6,button,a{
             }
           }
         }
+      }
+    }
+  }
+  &-footer{
+    padding: 20px 0;
+    margin: auto -90px;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    .github{
+      margin: auto;
+      font-size: 20px;
+      text-decoration: none;
+      color: #ffffff;
+      opacity: .6;
+      transition: $basic-transition;
+
+      &:hover{
+        opacity: 1;
+      }
+      &-icon{
+        width: 20px;
+        height: 20px;
+        background: url("img/github.png") no-repeat;
+        background-size: 100% 100%;
+        display: inline-block;
+        margin-right: 10px;
       }
     }
   }

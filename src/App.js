@@ -22,6 +22,9 @@ class App extends Component {
                   </ul>
               </div>
           </header>
+          <footer className="App-footer">
+              <a href="#" className="github"><span className="github-icon"></span>Github</a>
+          </footer>
       </div>
     );
   }
