@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300,400,500,700&subset=latin-ext");
+@keyframes play-btn-animation {
+  from {
+    color: transparent; }
+  50% {
+    color: transparent; }
+  to {
+    color: #000; } }
 p, span, i, em, b, strong {
   font-family: 'Roboto', sans-serif; }
 
@@ -7,6 +14,44 @@ h1, h2, h3, h4, h5, h6, button, a {
 
 .App {
   text-align: center; }
+  .App .error {
+    color: #ffffff; }
+  .App .start-btn {
+    position: absolute;
+    background: none;
+    border: 5px solid #000;
+    border-radius: 35px;
+    color: transparent;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 26px;
+    margin: auto -35px;
+    opacity: 0.6;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+    width: 70px;
+    height: 70px;
+    padding: 0 10px;
+    text-align: right;
+    top: 87.5%;
+    left: 50%; }
+    .App .start-btn:hover {
+      opacity: 0.8;
+      width: 170px;
+      margin: auto -85px;
+      animation: play-btn-animation  .7s forwards ease-in-out; }
+    .App .start-btn:before {
+      position: absolute;
+      top: 12.5px;
+      left: 17.5px;
+      content: '';
+      display: inline-block;
+      vertical-align: baseline;
+      width: 35px;
+      height: 35px;
+      background: url("img/play-solid.svg") no-repeat;
+      opacity: 1;
+      z-index: 100; }
   .App-header {
     height: 65px;
     padding: 40px 50px;
@@ -58,6 +103,9 @@ h1, h2, h3, h4, h5, h6, button, a {
           transition: all 0.5s ease-in-out; }
           .App-header .menu ul li a:hover {
             opacity: 1; }
+  .App .cards {
+    border: 1px solid red;
+    min-height: 700px; }
   .App-footer {
     padding: 20px 0;
     margin: auto -90px;
@@ -66,7 +114,8 @@ h1, h2, h3, h4, h5, h6, button, a {
     bottom: 0;
     left: 50%;
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    width: 180px; }
     .App-footer .github {
       margin: auto;
       font-size: 20px;
