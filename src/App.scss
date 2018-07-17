@@ -12,6 +12,15 @@ $basic-opacity: .8;
     color: #000;
   }
 }
+@keyframes menu-open {
+  from{
+    height: 0;
+  }
+  to{
+    height: 150px;
+  }
+}
+
 
 p,span,i,em,b,strong{
   font-family: 'Roboto', sans-serif;
@@ -110,15 +119,22 @@ h1,h2,h3,h4,h5,h6,button,a{
     .menu{
       position: absolute;
       top: 75px;
-      left: 65px;
+      left: 70px;
       padding: 20px 15px;
       display: block;
-      background: rgba(0, 0, 0, .6);
+      background: rgba(0, 0, 0, .8);
       border-radius: 10px;
+      overflow: hidden;
+      z-index: 1;
+      animation: menu-open .2s forwards linear;
       ul{
         list-style: none;
         padding: 0;
         margin: auto;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        height: 100%;
         li{
           a{
             font-size: 20px;
@@ -135,9 +151,46 @@ h1,h2,h3,h4,h5,h6,button,a{
       }
     }
   }
-  .cards{
-    border: 1px solid red;
-    min-height: 700px;
+  .content{
+    margin: 0;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .cards{
+      margin: 65px 50px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      .card{
+        background: #000000;
+        cursor: pointer;
+        height: 200px;
+        width: 150px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        opacity: $basic-opacity;
+        transition: $basic-transition;
+        &:hover{
+          opacity: 1;
+        }
+        .name-wrapper{
+          display: flex;
+          justify-content: center;
+          margin-bottom: 25px;
+          padding: 0;
+          height: 45px;
+          .name{
+            font-size: 20px;
+            color: #ffffff;
+            margin: auto;
+            width: 50%;
+          }
+        }
+      }
+    }
   }
   &-footer{
     padding: 20px 0;

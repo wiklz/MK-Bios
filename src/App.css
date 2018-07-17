@@ -6,6 +6,11 @@
     color: transparent; }
   to {
     color: #000; } }
+@keyframes menu-open {
+  from {
+    height: 0; }
+  to {
+    height: 150px; } }
 p, span, i, em, b, strong {
   font-family: 'Roboto', sans-serif; }
 
@@ -86,15 +91,22 @@ h1, h2, h3, h4, h5, h6, button, a {
     .App-header .menu {
       position: absolute;
       top: 75px;
-      left: 65px;
+      left: 70px;
       padding: 20px 15px;
       display: block;
-      background: rgba(0, 0, 0, 0.6);
-      border-radius: 10px; }
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 10px;
+      overflow: hidden;
+      z-index: 1;
+      animation: menu-open .2s forwards linear; }
       .App-header .menu ul {
         list-style: none;
         padding: 0;
-        margin: auto; }
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        height: 100%; }
         .App-header .menu ul li a {
           font-size: 20px;
           text-decoration: none;
@@ -103,9 +115,41 @@ h1, h2, h3, h4, h5, h6, button, a {
           transition: all 0.5s ease-in-out; }
           .App-header .menu ul li a:hover {
             opacity: 1; }
-  .App .cards {
-    border: 1px solid red;
-    min-height: 700px; }
+  .App .content {
+    margin: 0;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
+    .App .content .cards {
+      margin: 65px 50px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around; }
+      .App .content .cards .card {
+        background: #000000;
+        cursor: pointer;
+        height: 200px;
+        width: 150px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        opacity: 0.8;
+        transition: all 0.5s ease-in-out; }
+        .App .content .cards .card:hover {
+          opacity: 1; }
+        .App .content .cards .card .name-wrapper {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 25px;
+          padding: 0;
+          height: 45px; }
+          .App .content .cards .card .name-wrapper .name {
+            font-size: 20px;
+            color: #ffffff;
+            margin: auto;
+            width: 50%; }
   .App-footer {
     padding: 20px 0;
     margin: auto -90px;
