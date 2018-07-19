@@ -3,6 +3,11 @@ const Characters = [
         id: 0,
         name: "Cassie Cage",
 
+        images: [
+            "chars/front/cassie.png",
+            "chars/back/cassie.png"
+        ],
+
         history: "After the defeat of evil Outworld emperor Shao Kahn at the end of the 2011 series reboot, Johnny Cage and his wife Sonya Blade see the birth of their daughter, Cassandra Carlton Cage - shortened to \"Cassie\" - but they later divorce. Following in her mother's footsteps, Cassie joins the Special Forces that uses military training and technology to protect Earthrealm from its enemies. Under Raiden's orders, Cassie leads a task force assembled by her father and composed of a new generation of combatants—Jacqui Briggs, Takeda, and Kung Jin. The team gain experience as they attempt a sneak attack on Sub-Zero's Lin Kuei temple but are defeated; the attack is revealed as a training exercise set up by Johnny Cage. Sub-Zero tells Cassie and her unit they will fail unless they work together as a team.",
 
         characteristics:{

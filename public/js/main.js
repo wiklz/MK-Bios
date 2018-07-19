@@ -110,23 +110,23 @@ function animate() {
 
             // X axis
             if(mousePos.y <= height25){
-                mesh.rotation.x -= 0.0013;
+                mesh.rotation.x -= 0.0009;
 
-                if(mesh.rotation.x <= -0.47){
-                    mesh.rotation.x = -0.47;
+                if(mesh.rotation.x <= -0.25){
+                    mesh.rotation.x = -0.25;
                 }
             }
             else if(mousePos.y > height25 && mousePos.y < height75){
 
                 if (mesh.rotation.x < 0){
-                    mesh.rotation.x += 0.0013;
+                    mesh.rotation.x += 0.0009;
 
                     if (mesh.rotation.x >= 0){
                         mesh.rotation.x = 0;
                     }
                 }
                 if (mesh.rotation.x > 0){
-                    mesh.rotation.x -= 0.0013;
+                    mesh.rotation.x -= 0.0009;
 
                     if (mesh.rotation.x <= 0){
                         mesh.rotation.x = 0;
@@ -134,32 +134,32 @@ function animate() {
                 }
             }
             else {
-                mesh.rotation.x += 0.0013;
+                mesh.rotation.x += 0.0009;
 
-                if(mesh.rotation.x >= 0.47){
-                    mesh.rotation.x = 0.47;
+                if(mesh.rotation.x >= 0.25){
+                    mesh.rotation.x = 0.25;
                 }
             }
 
             // Y axis
             if(mousePos.x <= width25){
-                mesh.rotation.y -= 0.0013;
+                mesh.rotation.y -= 0.0009;
 
-                if(mesh.rotation.y <= -0.47){
-                    mesh.rotation.y = -0.47;
+                if(mesh.rotation.y <= -0.25){
+                    mesh.rotation.y = -0.25;
                 }
             }
             else if(mousePos.x > width25 && mousePos.x < width75){
 
                 if (mesh.rotation.y < 0){
-                    mesh.rotation.y += 0.0013;
+                    mesh.rotation.y += 0.0009;
 
                     if (mesh.rotation.y >= 0){
                         mesh.rotation.y = 0;
                     }
                 }
                 if (mesh.rotation.y > 0){
-                    mesh.rotation.y -= 0.0013;
+                    mesh.rotation.y -= 0.0009;
 
                     if (mesh.rotation.y <= 0){
                         mesh.rotation.y = 0;
@@ -167,10 +167,10 @@ function animate() {
                 }
             }
             else {
-                mesh.rotation.y += 0.0013;
+                mesh.rotation.y += 0.0009;
 
-                if(mesh.rotation.y >= 0.47){
-                    mesh.rotation.y = 0.47;
+                if(mesh.rotation.y >= 0.25){
+                    mesh.rotation.y = 0.25;
                 }
             }
         }
